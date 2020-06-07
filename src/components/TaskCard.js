@@ -9,23 +9,21 @@ import {
 import PropTypes from "prop-types";
 import styles from "../styles";
 
-class TaskCard extends Component {
-  render() {
-    const classes = this.props.classes;
+function TaskCard(props) {
+  const classes = props.classes;
 
-    return (
-      <Card className={classes.card}>
-        <CardHeader
-          title={this.props.name}
-          titleTypographyProps={{ variant: "h5" }}
-          className={classes.cardHeader}
-        />
-        <CardContent className={classes.cardContent}>
-          <Typography variant="body1">{this.props.description}</Typography>
-        </CardContent>
-      </Card>
-    );
-  }
+  return (
+    <Card className={classes.card}>
+      <CardHeader
+        title={props.name}
+        titleTypographyProps={{ variant: "h5" }}
+        className={classes.cardHeader}
+      />
+      <CardContent className={classes.cardContent}>
+        <Typography variant="body1">{props.description}</Typography>
+      </CardContent>
+    </Card>
+  );
 }
 
 TaskCard.propTypes = {
