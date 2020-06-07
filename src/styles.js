@@ -6,6 +6,20 @@ export default (theme) => ({
     backgroundImage: "linear-gradient(to right, #fdc830, #f37335)",
     color: "white",
   },
+  greenButton: {
+    backgroundColor: "rgb(0, 204, 0)",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "rgb(0, 204, 0)",
+    },
+  },
+  redButton: {
+    backgroundColor: "rgb(255, 51, 0)",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "rgb(255, 51, 0)",
+    },
+  },
   card: {
     width: "auto",
   },

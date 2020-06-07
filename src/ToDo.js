@@ -98,7 +98,7 @@ class ToDo extends Component {
               color="primary"
               variant="contained"
               onClick={this.toggleForm}
-              className={classes.button}
+              className={classes.redButton}
             >
               Cancel
             </Button>
@@ -106,7 +106,7 @@ class ToDo extends Component {
               color="primary"
               variant="contained"
               onClick={this.addTask}
-              className={classes.button}
+              className={classes.greenButton}
             >
               Confirm
             </Button>
@@ -140,14 +140,14 @@ class ToDo extends Component {
             </Button>
           </Grid>
         </Grid>
-        {/*items*/}
+        {/*task cards*/}
         <br />
         <Grid
           container
           spacing={2}
           direction="row"
           justify="center"
-          alignItems="center" /*main page column*/
+          alignItems="center"
         >
           <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask} />
         </Grid>
