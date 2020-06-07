@@ -1,5 +1,5 @@
 {
-  "name": "to-do-beta",
+  "name": "cen3031-to-do-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,6 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "author": "Jack Zheng",
   "eslintConfig": {
     "extends": "react-app"
   },
