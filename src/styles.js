@@ -10,10 +10,14 @@ export default (theme) => ({
     width: "auto",
   },
   cardHeader: {
+    textAlign: "center",
     backgroundColor: "rgb(249, 122, 22)",
   },
   cardContent: {
     textAlign: "center",
     backgroundColor: "rgb(245, 146, 70)",
+  },
+  cardActions: {
+    justifyContent: "center",
   },
 });

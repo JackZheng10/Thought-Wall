@@ -36,7 +36,6 @@ class ToDo extends Component {
   };
 
   addTask = () => {
-    console.log(1);
     let task = {
       name: this.state.name,
       description: this.state.description,
@@ -45,6 +44,13 @@ class ToDo extends Component {
     this.setState({ tasks: [...this.state.tasks, task] }, () => {
       this.toggleForm();
     });
+  };
+
+  deleteTask = (index) => {
+    let tasks = this.state.tasks;
+    tasks.splice(index, 1);
+
+    this.setState({ tasks });
   };
 
   render() {
@@ -143,7 +149,7 @@ class ToDo extends Component {
           justify="center"
           alignItems="center" /*main page column*/
         >
-          <TaskList tasks={this.state.tasks} />
+          <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask} />
         </Grid>
       </React.Fragment>
     );

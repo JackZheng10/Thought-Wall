@@ -5,9 +5,12 @@ import {
   Card,
   CardHeader,
   CardContent,
+  CardActions,
+  IconButton,
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import styles from "../styles";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function TaskCard(props) {
   const classes = props.classes;
@@ -22,6 +25,15 @@ function TaskCard(props) {
       <CardContent className={classes.cardContent}>
         <Typography variant="body1">{props.description}</Typography>
       </CardContent>
+      <CardActions className={classes.cardActions}>
+        <IconButton
+          onClick={() => {
+            props.deleteTask(props.index);
+          }}
+        >
+          <DeleteIcon />
+        </IconButton>
+      </CardActions>
     </Card>
   );
 }
