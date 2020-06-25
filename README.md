@@ -1,4 +1,4 @@
-# CEN3031 To-Do App
+# To-Do App
 
 ## How to run the application
 
