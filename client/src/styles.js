@@ -3,7 +3,7 @@ export default (theme) => ({
     color: "white",
   },
   button: {
-    backgroundImage: "linear-gradient(to right, #fdc830, #f37335)",
+    backgroundColor: "#F37335",
     color: "white",
   },
   greenButton: {
@@ -21,7 +21,7 @@ export default (theme) => ({
     },
   },
   card: {
-    width: "auto",
+    minWidth: 150,
   },
   cardHeader: {
     textAlign: "center",

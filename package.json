@@ -1,38 +1,31 @@
 {
-  "name": "cen3031-to-do-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "thought-wall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
-    "@material-ui/core": "^4.10.1",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "morgan": "^1.10.0",
+    "node-cron": "^2.0.3",
+    "nodemon": "^2.0.2",
+    "socket.io": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "install-all": "concurrently \"npm install\" \"cd client && npm install\"",
+    "client": "cd client && npm run dev",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"nodemon server/server.js\" \"cd client && npm run start\"",
+    "build": "cd client && npm build",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[D\u001b[D\u001b[DThought-Wall.git)"
   },
   "author": "Jack Zheng",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "license": "ISC"
 }
