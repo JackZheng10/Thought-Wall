@@ -22,7 +22,7 @@ const addThought = async (req, res) => {
 
 const getThoughts = async (req, res) => {
   try {
-    const thoughts = await Thought.find();
+    const thoughts = await Thought.find().select(["-__v"]);
 
     return res.json({
       success: true,

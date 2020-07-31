@@ -37,7 +37,15 @@ class App extends Component {
       this.setState({ thoughts: [...this.state.thoughts, thought] });
     });
 
-    socket.on("thoughtsCleared", (thought) => {
+    socket.on("deletedThought", (id) => {
+      const updatedThoughts = this.state.thoughts.filter((thought) => {
+        return thought._id !== id;
+      });
+
+      this.setState({ thoughts: updatedThoughts });
+    });
+
+    socket.on("thoughtsCleared", () => {
       this.setState({ thoughts: [] });
     });
 
@@ -49,6 +57,7 @@ class App extends Component {
       const response = await axios.get(`${URLs.baseURL}/thought/getThoughts`);
 
       if (response.data.success) {
+        console.log(response.data.message);
         this.setState({ thoughts: response.data.message });
       } else {
         alert(response.data.message);

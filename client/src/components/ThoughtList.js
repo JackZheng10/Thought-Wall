@@ -9,7 +9,7 @@ const ThoughtList = (props) => {
         <ThoughtCard
           name={thought.name}
           description={thought.description}
-          index={index}
+          key={index}
         />
       </Grid>
     );
