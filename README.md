@@ -1,1 +1,1 @@
-# Thought Wall: http://thoughtwall.herokuapp.com/
+# Thought Wall
